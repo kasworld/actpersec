@@ -1,2 +1,2 @@
-# actpersec
-action per second
+# actionstat
+golang statistics for activity
