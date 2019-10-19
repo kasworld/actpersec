@@ -98,3 +98,10 @@ func (a *ActPerSec) Inc() {
 	a.totalCount++
 	a.currentLapCount++
 }
+
+func (a *ActPerSec) Add(n int) {
+	a.mutex.Lock()
+	defer a.mutex.Unlock()
+	a.totalCount += n
+	a.currentLapCount += n
+}
